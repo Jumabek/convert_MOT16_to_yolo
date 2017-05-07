@@ -13,7 +13,7 @@ Since MOT17 has the same images as MOT16 but improved and more accurate annotati
 <ul>
 <li> You will get yolo format annotations in 'labels' folder</li>
 <li> You can also get images with drawn bboxes in 'drawn_img' folder by setting 'VISUALIZE=1' in convert_to_yolo.m </li>
-<ul>
+</ul>
 
 <h1>What is MOT16/17?</h1>
 
