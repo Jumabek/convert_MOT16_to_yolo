@@ -15,6 +15,12 @@ Since MOT17 has the same images as MOT16 but improved and more accurate annotati
 <li> You can also get images with drawn bboxes in 'drawn_img' folder by setting 'VISUALIZE=1' in convert_to_yolo.m </li>
 </ul>
 
+<h3>Note </h3>
+ I converted pedestrian, person_on_vehicle and static_person as a positive class (labeled as 0). Distraction and reflection classes are converted as don't-know class (labeled as '-1'). You should customize YOLO to ignore examples with '-1' class while computing the loss. 
+
+Note '-1' class is neither negative nor a positive class. Hence, we should ignore those kinds of objects when computing the loss/cost-function.
+
+
 <h1>What is MOT16/17?</h1>
 
 MOT17 Det is a dataset for people detection challenge from MOT  (https://motchallenge.net/data/MOT17Det/). It contains 14 videos under different lighting, view, weather conditions, 7 of them are training set and another 7 are used as test set. This dataset, MOT 17Det is the improved version of MOT 16 (https://arxiv.org/pdf/1603.00831.pdf).
@@ -29,13 +35,9 @@ According to https://arxiv.org/pdf/1603.00831.pdf, MOT 16 contains ~320,000 pers
 
 
 This dataset annotation is diferent from YOLO annotations in three ways:
-
-It contains whole video annotation in a single file
-It contains 12 classes
-its annotations are in [frm_id,seq_id,xmin,ymin,w,h,confidence,class,visibility] and not in [relative_x, relative_y, relative_w, relative_h] format. 
-This repo contains my script that will convert MOT17 Det annotations to YOLO format. https://github.com/Jumabek/convert_MOT16_to_yolo
-
- I converted pedestrian, person_on_vehicle and static_person as a positive class (labeled as 0). Distraction and reflection classes are converted as don't-know class (labeled as '-1'). You should customize YOLO to ignore examples with '-1' class while computing the loss. 
-
-Note '-1' class is neither negative nor a positive class. Hence, we should ignore those kinds of objects when computing the loss/cost-function.
+<ul>
+<li>It contains whole video annotation in a single file </li>
+<li>It contains 12 classes </li>
+<li>Its annotations are in [frm_id,seq_id,xmin,ymin,w,h,confidence,class,visibility] and not in [relative_x, relative_y, relative_w, relative_h] format </li>
+</ul>
 
