@@ -27,6 +27,7 @@ According to https://arxiv.org/pdf/1603.00831.pdf, MOT 16 contains ~320,000 pers
 
 Table3.png
 
+
 This dataset annotation is diferent from YOLO annotations in three ways:
 
 It contains whole video annotation in a single file
