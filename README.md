@@ -4,13 +4,16 @@ Since MOT17 has the same images as MOT16 but improved and more accurate annotati
 
 
 <h1>How to use script?</h1>
-1. Change the 'dataset_root' in convert_to_yolo.m to point to your MOT17/MOT16 location.
-2. Run convert_to_yolo from matlab
+<ul>
+<li>  Change the 'dataset_root' in convert_to_yolo.m to point to your MOT17/MOT16 location. </li>
+<li>  Run convert_to_yolo from matlab </li>
+</ul>
 
 <h1>Outputs</h1>
-1. You will get yolo format annotations in 'labels' folder
-2. You can also get images with drawn bboxes in 'drawn_img' folder by setting 'VISUALIZE=1' in convert_to_yolo.m 
-
+<ul>
+<li> You will get yolo format annotations in 'labels' folder</li>
+<li> You can also get images with drawn bboxes in 'drawn_img' folder by setting 'VISUALIZE=1' in convert_to_yolo.m </li>
+<ul>
 
 <h1>What is MOT16/17?</h1>
 
@@ -18,7 +21,7 @@ MOT17 Det is a dataset for people detection challenge from MOT  (https://motchal
 
 
 
-Dataset Statistics
+<h3> Dataset Statistics </h3>
 
 According to https://arxiv.org/pdf/1603.00831.pdf, MOT 16 contains ~320,000 person annotations (Pedestrian + person_on_vehicle + static_person) Table 3.  It also contains distractor class(statues, mannikin) and reflection class(reflection of people in the mirror). These two classes could be ignored by detector, for example, if detector detects them we do not say it is false detection and if detector misses them, we do not say misdetection. That way detector can learn from only 'clean' annotations. 
 
