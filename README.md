@@ -25,7 +25,7 @@ MOT17 Det is a dataset for people detection challenge from MOT  (https://motchal
 
 According to https://arxiv.org/pdf/1603.00831.pdf, MOT 16 contains ~320,000 person annotations (Pedestrian + person_on_vehicle + static_person) Table 3.  It also contains distractor class(statues, mannikin) and reflection class(reflection of people in the mirror). These two classes could be ignored by detector, for example, if detector detects them we do not say it is false detection and if detector misses them, we do not say misdetection. That way detector can learn from only 'clean' annotations. 
 
-<img src = 'https://ibb.co/b3ozvk' />
+<img src="https://image.ibb.co/daOXFk/Table3.png" alt="Table3" border="0">
 
 
 This dataset annotation is diferent from YOLO annotations in three ways:
